@@ -32,36 +32,58 @@
 
 <div class="container">
 
-    <form action="/logout" method="POST">
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Покинути особистий кабінет</button>
-    </form>
-    <h2>Сторінка замовлень</h2>
+
+    <h2 class="text-center">Технічне завдання на проект</h2>
     <form class="form-signin" method="post" action="/orderuser">
-
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="architecture">
+            <label class="form-check-label" for="architecture">
+                Архітектурні рішення - плани, розрізи фасади. Ескізні наміри забудови
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="constructive">
+            <label class="form-check-label" for="constructive">
+                Конструктивні рішення. Розрахунок конструкцій, елементів, вузлів.
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="specification">
+            <label class="form-check-label" for="specification">
+                Складання специфікацій на будівельні матеріали, витрат, технології постачання та облаштування.
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="engineering">
+            <label class="form-check-label" for="engineering">
+                Інженерія. Водояні, електричні, теплові, тощо куомунікації.
+            </label>
+        </div>
+        <br>
         <p>
-            <label for="username">Вкажіть ім'я отримувача</label>
+            <label for="username">Назва будинку</label>
             <input type="text" id="username" name="username" class="form-control"
-                   placeholder="Імя отримувача" required>
+                   placeholder="Кожен будино повинен мати назву" required>
         </p>
         <p>
-            <label for="phone">Вкажіть телефон отримувача</label>
-            <input type="text" id="phone" name="phone" class="form-control" placeholder="Телефон отримувача"
+            <label for="phone">Вкажіть телефон </label>
+            <input type="text" id="phone" name="phone" class="form-control" placeholder="Телефон"
                    required>
         </p>
         <p>
-            <label for="text">Що Вам підібрати та надіслати та на яку адресу </label>
-            <input type="text" id="text" name="text" class="form-control" placeholder="Вкажіть замовлення"
+            <label for="text">Рішення та вимоги</label>
+            <input type="text" id="text" name="text" class="form-control"
+                   placeholder="Вкажіть основні воги до проекту та деталі"
                    required>
         </p>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Зробити замовлення</button>
+        <button class="btn btn-lg btn-success btn-block" type="submit">Публікувати</button>
+        <form action="/logout" method="POST">
+            <br>
+            <br>
+            <button class="btn btn-lg btn-danger btn-block" type="submit">Покинути особистий кабінет</button>
+        </form>
         <br>
         <br>
-
-        <h5> При замовлені пилку до 10 кг - 110 грн/кг. При замовлені пилку від 10 кг - 90 грн/кг</h5>
-        <h5> При замовлені від 1000 грн - доставка безкоштовна
-            Відправлення здійснюється Новою Поштою та Укр-поштою, по всій території України. Оплата
-            при отриманні</h5>
-
     </form>
 
 

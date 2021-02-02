@@ -36,6 +36,8 @@ public class User {
     @Column(name = "state")
     private State state;
 
+
+
 //    @OneToMany(fetch = FetchType.EAGER, mappedBy = "user")
 ////    @OrderBy("dateTime DESC")
 ////    @JsonIgnore
