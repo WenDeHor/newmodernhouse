@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<!--<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html" lang="an">-->
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <!--    <title th:text="${title}"></title>-->
+    <!--    <title th:text="${user}"></title>-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!--   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">-->
+    <!--    CSS-->
+    <link rel="stylesheet" href="../static/css/mine.css">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="blocks/js/script.js"></script>
+
+</head>
+
+<header th:insert="blocks/heder-mine::header-mine"></header>
+<br>
+
+<div class="container">
+
+    <h2 class="text-center">Технічне завдання на проект</h2>
+
+    <form class="form-signin" method="post" action="/technical_task">
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="architecture" name="architecture" >
+            <label class="form-check-label" for="architecture">
+                Архітектурні рішення - плани, розрізи фасади. Ескізні наміри забудови
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="landscaping" name="landscaping">
+            <label class="form-check-label" for="landscaping">
+                Благоустрій, озелення, генеральний план
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="constructive" name="constructive">
+            <label class="form-check-label" for="constructive">
+                Конструктивні рішення. Розрахунок конструкцій, елементів, вузлів.
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="specification" name="specification">
+            <label class="form-check-label" for="specification">
+                Складання специфікацій на будівельні матеріали, витрат, технології постачання та облаштування.
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="engineering" name="engineering">
+            <label class="form-check-label" for="engineering">
+                Інженерні куомунікації. Вода, електрика, тепловітеплові мережі, вентиляція.
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="engineering_energy" name="engineering_energy">
+            <label class="form-check-label" for="engineering_energy">
+                Альтернативна енергетика. Сонячна, повітряна, теплова.
+            </label>
+        </div>
+        <br>
+        <p class="text-name">
+            <label for="house_name">Назва будинку</label>
+            <input type="text" id="house_name" name="house_name" class="form-control"
+                   placeholder="Кожен будино повинен мати назву" required>
+        </p>
+        <p class="text-name">
+            <label for="phone">Вкажіть телефон </label>
+            <input type="text" id="phone" name="phone" class="form-control" placeholder="Телефон"
+                   required>
+        </p>
+        <p class="text-name">
+            <label for="text">Рішення та вимоги</label>
+            <input type="text" id="text" name="text" class="form-control"
+                   placeholder="Вкажіть основні воги до проекту та деталі"
+                   required>
+        </p>
+        <br>
+        <p class="text-name text-success">На протязі одного дня, буде розглянута заявка та на пошту буде надіслана проектна пропозиція</p>
+        <button class="btn btn-lg btn-success btn-block" type="submit">Отримати проектну пропозицію</button>
+        <br>
+
+    </form>
+
+
+</div>
+<footer th:insert="blocks/footer-first::footer-first"></footer>
+</html>
